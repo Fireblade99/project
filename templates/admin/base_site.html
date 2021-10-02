@@ -1,0 +1,39 @@
+{% extends "admin/base.html" %}
+{% load static %}
+<link href="{% static 'external.css' %}" rel="stylesheet">
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block extrastyle %}
+<style>
+body {
+    background: #ADD8E6;
+    font-family: 'montserrat', sans-serif;
+}
+
+#header {
+    background: #4682B4;
+}
+
+h1 {
+    color: #000;
+}
+
+#branding{
+    width: 90%;
+}
+
+#site-name{
+    float: right;
+}
+
+</style>
+{% endblock %}
+{% block branding %}
+
+<a class="logo-top" href="/" style="font-size: 15pt">
+	G - Detailing admin panel
+</a>
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
